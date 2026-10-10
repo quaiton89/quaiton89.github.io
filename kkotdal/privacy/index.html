@@ -30,7 +30,7 @@
   <tr><th>항목</th><th>처리 방식</th><th>저장 위치</th></tr>
   <tr><td>생리일, 생리량, 통증, 증상, 기분, 분비물, 성관계, 피임약 복용, 기초체온, 체중, 테스트 결과, 메모, 스티커</td><td>주기 예측과 기록 기능 제공을 위해 기기 안에 저장</td><td>사용자 기기. 서버로 전송하지 않음</td></tr>
   <tr><td>앱 설정 (닉네임, 사용 목적, 주기 길이, 알림, 피임약 팩, 잠금 비밀번호, 언어, 테마)</td><td>사용자 편의를 위해 기기 안에 저장</td><td>사용자 기기</td></tr>
-  <tr><td>익명 사용 통계</td><td>앱 개선을 위해 Firebase Analytics 로 앱 실행, 화면 이동, 기능 사용 여부(예: 공유 카드 사용, 꿀팁 열람) 등 비식별 통계를 수집합니다. <strong>생리일, 증상, 기분, 성관계, 사용 목적 등 건강 관련 기록은 포함되지 않습니다.</strong> 광고 ID 는 수집하지 않으며 광고 개인화에 쓰이지 않습니다.</td><td>Google Firebase</td></tr>
+  <tr><td>익명 사용 통계</td><td>앱 개선을 위해 Firebase Analytics 로 앱 실행, 화면 이동, 기능 사용 여부(예: 공유 카드 사용, 꿀팁 열람) 등 비식별 통계와 앱 설치별 무작위 ID(앱 인스턴스 ID), IP 주소에서 추정한 국가·도시 수준의 대략적인 위치를 수집합니다. IP 주소 자체는 저장되지 않으며, 정확한 위치(GPS)는 수집하지 않습니다. <strong>생리일, 증상, 기분, 성관계, 사용 목적 등 건강 관련 기록은 포함되지 않습니다.</strong> 광고 ID 는 수집하지 않으며 광고 개인화에 쓰이지 않습니다.</td><td>Google Firebase</td></tr>
   <tr><td>백업 파일</td><td>사용자가 '백업 파일 내보내기'를 실행할 때만 만들어지며, 저장·공유 위치는 사용자가 직접 선택</td><td>사용자가 선택한 위치</td></tr>
 </table>
 
@@ -74,7 +74,7 @@
   <tr><th>Data</th><th>How it is used</th><th>Where it is stored</th></tr>
   <tr><td>Period days, flow, pain, symptoms, moods, discharge, sex, pill intake, basal temperature, weight, test results, notes, stickers</td><td>Saved to provide predictions and tracking</td><td>Your device. Never uploaded</td></tr>
   <tr><td>Settings (nickname, goal, cycle length, reminders, pill pack, lock PIN, language, theme)</td><td>Saved for your convenience</td><td>Your device</td></tr>
-  <tr><td>Anonymous usage statistics</td><td>To improve the App, Firebase Analytics collects non-identifying statistics such as app opens, screen views and whether features are used (e.g. share card, tips). <strong>No period days, symptoms, moods, sex, goals or other health data are included.</strong> The advertising ID is not collected or used for ad personalization.</td><td>Google Firebase</td></tr>
+  <tr><td>Anonymous usage statistics</td><td>To improve the App, Firebase Analytics collects non-identifying statistics such as app opens, screen views and whether features are used (e.g. share card, tips), a random per-install ID (app instance ID), and an approximate country/city-level location derived from the IP address. The IP address itself is not stored, and precise (GPS) location is never collected. <strong>No period days, symptoms, moods, sex, goals or other health data are included.</strong> The advertising ID is not collected or used for ad personalization.</td><td>Google Firebase</td></tr>
   <tr><td>Backup file</td><td>Created only when you choose "Export backup"; you pick where it goes</td><td>A location you choose</td></tr>
 </table>
 
