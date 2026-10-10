@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KeyVault 개인정보처리방침</title>
+<style>
+:root { --bg: #fafafa; --text: #16181d; --text2: #4a4f5a; --text3: #8a8f99; --line: #e6e7ea; }
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #111214; --text: #f2f3f5; --text2: #b4b8c0; --text3: #7d828c; --line: #26282c; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text2);
+  font: 16px/1.7 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+  word-break: keep-all; }
+main { max-width: 680px; margin: 0 auto; padding: 56px 16px 80px; }
+h1 { color: var(--text); font-size: 26px; line-height: 1.35; letter-spacing: -0.4px; margin: 0 0 6px; }
+.date { color: var(--text3); font-size: 14px; margin: 0 0 28px; padding-bottom: 24px; border-bottom: 1px solid var(--line); }
+h2 { color: var(--text); font-size: 17px; margin: 36px 0 8px; }
+p { margin: 0 0 8px; }
+ul { margin: 0; padding-left: 20px; }
+li { margin: 6px 0; }
+</style>
+</head>
+<body>
+<main>
+<h1>KeyVault 개인정보처리방침</h1>
+<p class="date">시행일 2026년 10월 10일</p>
+<p>KeyVault는 회원 가입이 없고, 개발자가 운영하는 서버도 없어요. 개발자는 이용자의 개인정보를 수집하거나 저장하거나 이용하지 않아요. 이 방침은 앱이 이용자의 정보를 어떻게 다루는지 설명해요.</p>
+<h2>1. 기기 안에 저장되는 정보</h2>
+<ul>
+<li>보관함 항목(로그인, 카드, 신원, 메모, 패스키, 인증 코드)은 이용자 기기 안에만 저장되고, 항목마다 AES-256-GCM으로 암호화돼요.</li>
+<li>마스터 비밀번호는 어디에도 저장하지 않아요. 개발자를 포함해 누구도 보관함을 열거나 비밀번호를 되찾아 줄 수 없어요.</li>
+<li>비밀번호 힌트는 잠긴 화면에 보여 주기 위해 암호화하지 않고 기기에 저장해요.</li>
+<li>테마, 자동 잠금 시간 같은 앱 설정은 기기에만 저장해요.</li>
+<li>보관함은 안드로이드 클라우드 백업 대상에서 제외돼 있어요.</li>
+</ul>
+<h2>2. 기기 밖으로 보내는 정보</h2>
+<p>동기화와 유출 비밀번호 확인은 이용자가 직접 켜야 동작해요. 사이트 아이콘 받기는 기본으로 켜져 있고 설정에서 끌 수 있어요. 통신하는 과정에서 각 서비스가 이용자의 IP 주소를 알 수 있어요.</p>
+<ul>
+<li>동기화: 이용자가 고른 저장소(Google Drive 같은 파일 위치나 WebDAV 서버)에 암호화된 보관함 파일을 올려요. 저장소 운영자는 파일 내용을 볼 수 없고, 그 회사의 개인정보 처리는 해당 회사의 방침을 따라요. WebDAV 접속 정보는 기기의 보안 저장소에만 보관해요.</li>
+<li>유출 비밀번호 확인: Have I Been Pwned(api.pwnedpasswords.com)에 비밀번호 SHA-1 해시의 앞 다섯 글자만 보내요. 비밀번호나 전체 해시는 보내지 않고, 비교는 기기 안에서 해요.</li>
+<li>사이트 아이콘: 자주 쓰는 서비스의 아이콘은 앱 안에 들어 있어서 통신하지 않아요. 앱에 없는 사이트는 그 사이트에 직접 접속해 아이콘을 받아 오고, 다른 회사로는 주소를 보내지 않아요. 받은 아이콘은 보관함 키로 암호화해 기기에 보관해요.</li>
+</ul>
+<h2>3. 사용하는 권한</h2>
+<ul>
+<li>카메라: 인증 코드 QR을 스캔할 때만 써요. 사진이나 영상은 저장하지 않아요.</li>
+<li>생체 인증: 보관함을 열 때 써요. 지문이나 얼굴 정보는 안드로이드가 처리하고, 앱은 받지 않아요.</li>
+<li>인터넷: 2항의 기능에만 써요.</li>
+<li>자동 채우기·패스키 제공: 이용자가 기기 설정에서 켠 경우, 다른 앱이나 웹사이트의 로그인 화면에 정보를 채워요. 그 화면의 앱 이름과 주소는 맞는 항목을 찾는 데만 쓰고, 이용자가 저장을 고른 경우에만 항목에 기록해요.</li>
+<li>다른 앱 오버레이 숨기기: 앱 화면 위에 다른 앱이 그려지지 않게 하는 보호 기능이에요.</li>
+</ul>
+<h2>4. 제3자 제공과 처리 위탁</h2>
+<p>개인정보를 제3자에게 제공하거나 처리를 위탁하지 않아요.</p>
+<h2>5. 광고와 분석</h2>
+<p>광고, 이용 분석 도구, 오류 수집 도구를 쓰지 않아요.</p>
+<h2>6. 보관 기간과 파기</h2>
+<p>정보는 이용자 기기와 이용자가 고른 동기화 저장소에만 있어요. 앱을 지우거나 &#39;보관함 지우고 새로 시작&#39;을 고르면 기기 안의 정보가 바로 지워져요. 동기화 저장소의 파일은 이용자가 직접 지울 수 있어요.</p>
+<h2>7. 이용자의 권리</h2>
+<p>모든 정보가 이용자 기기 안에 있으므로, 이용자는 앱에서 언제든 항목을 보고 고치고 지우고 내보낼 수 있어요. 개발자가 따로 보관하는 정보는 없어요.</p>
+<h2>8. 아동의 개인정보</h2>
+<p>앱은 누구의 개인정보도 수집하지 않으며, 만 14세 미만 아동의 정보도 마찬가지예요.</p>
+<h2>9. 방침의 변경</h2>
+<p>방침이 바뀌면 앱 업데이트와 이 페이지를 통해 알려 드려요.</p>
+<h2>10. 문의</h2>
+<p>개인정보 보호 책임자: KeyVault 개발자<br>이메일: quaiton89@gmail.com</p>
+</main>
+</body>
+</html>
