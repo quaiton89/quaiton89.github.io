@@ -32,7 +32,6 @@
   <tr><td>사용자가 직접 고른 사진(편집·꾸미기)</td><td>시스템 사진 선택기로 고른 사진만 기기 안에서 편집. 작업용 임시 복사본은 1시간 안에 자동 삭제</td><td>사용자 기기. 편집 결과는 새 파일로 저장(원본 유지)</td></tr>
   <tr><td>얼굴 위치·윤곽, 인물 영역</td><td>피부 보정, 얼굴형·메이크업 보정, 배경 흐림을 위해 기기 안(Google ML Kit 온디바이스)에서 실시간으로 계산하고 즉시 폐기. 얼굴 인식(누구인지 식별)·생체 정보 저장 없음</td><td>저장하지 않음</td></tr>
   <tr><td>앱 설정(프리셋, 격자, 타이머 등)</td><td>사용자 편의를 위해 기기 안에 저장</td><td>사용자 기기</td></tr>
-  <tr><td>익명 사용 통계</td><td>Firebase Analytics 를 통해 앱 실행, 촬영 횟수, 사용한 프리셋 종류 등 비식별 통계를 수집할 수 있음. 사진이나 개인 정보는 포함되지 않음</td><td>Google Firebase</td></tr>
 </table>
 
 <h2>2. 앱 권한</h2>
@@ -43,7 +42,7 @@
 </ul>
 
 <h2>3. 제3자 제공 및 위탁</h2>
-<p>사용자의 사진과 개인 정보를 제3자에게 제공하거나 판매하지 않습니다. 익명 사용 통계는 Google LLC 의 Firebase Analytics 가 처리하며, 해당 처리는 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 개인정보처리방침</a>을 따릅니다.</p>
+<p>사용자의 사진과 개인 정보를 수집하지 않으며, 제3자에게 제공하거나 판매하지 않습니다. 앱은 사용 통계·광고 ID 를 수집하거나 외부 서버로 전송하지 않습니다.</p>
 
 <h2>4. 보유 및 파기</h2>
 <p>촬영한 사진은 사용자가 직접 삭제할 때까지 사용자 기기에 보관됩니다. 앱을 삭제하면 앱 설정은 함께 삭제되며, 갤러리에 저장된 사진은 남습니다.</p>
@@ -71,7 +70,6 @@
   <tr><td>Photos you choose to edit or decorate</td><td>Only photos you pick in the system photo picker are edited on-device. Temporary working copies are deleted automatically within an hour</td><td>Your device. Edits are saved as new files; originals are kept</td></tr>
   <tr><td>Face position and contours, person area</td><td>Computed in real time on-device (Google ML Kit, on-device) for skin retouching, face shape and makeup, and background blur, then discarded immediately. No face recognition (identifying who someone is) and no biometric data stored</td><td>Not stored</td></tr>
   <tr><td>App settings (presets, grid, timer, …)</td><td>Saved for your convenience</td><td>Your device</td></tr>
-  <tr><td>Anonymous usage statistics</td><td>Firebase Analytics may collect non-identifying statistics such as app opens, number of captures, and preset types used. No photos or personal data are included</td><td>Google Firebase</td></tr>
 </table>
 
 <h2>2. Permissions</h2>
@@ -82,7 +80,7 @@
 </ul>
 
 <h2>3. Third parties</h2>
-<p>We do not share or sell your photos or personal information. Anonymous usage statistics are processed by Google LLC's Firebase Analytics under the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</p>
+<p>We do not collect, share or sell your photos or personal information. The app does not collect usage statistics or the advertising ID, and sends nothing to external servers.</p>
 
 <h2>4. Retention</h2>
 <p>Photos stay on your device until you delete them. Uninstalling the App removes its settings; photos saved to your gallery remain.</p>
