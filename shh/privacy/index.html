@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>쉿 개인정보처리방침</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { max-width: 720px; margin: 0 auto; padding: 32px 20px 64px; font: 16px/1.7 -apple-system, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; color: #2E241C; background: #FAF4EA; }
+  @media (prefers-color-scheme: dark) { body { color: #F3EADC; background: #1B1612; } a { color: #D9784E; } }
+  a { color: #A8502C; }
+  h1 { font-size: 24px; margin-bottom: 4px; }
+  h2 { font-size: 18px; margin-top: 32px; }
+  .meta { color: #8c7f72; font-size: 14px; }
+  .lang { margin: 24px 0; padding: 12px 16px; border-radius: 12px; background: rgba(168,80,44,.12); font-size: 14px; }
+  table { border-collapse: collapse; width: 100%; font-size: 15px; }
+  td, th { border: 1px solid rgba(128,128,128,.35); padding: 8px 10px; text-align: left; vertical-align: top; }
+  hr { border: 0; border-top: 1px solid rgba(128,128,128,.3); margin: 48px 0; }
+</style>
+</head>
+<body>
+
+<h1>쉿 개인정보처리방침</h1>
+<p class="meta">시행일: 2026년 10월 12일</p>
+<div class="lang">English version below. · 日本語・中文のお問い合わせは英語または韓国語でお願いします。</div>
+
+<p>쉿(이하 "앱")은 회원가입 없이 사용하는 알림 정리 앱입니다. 앱에는 광고와 결제가 없습니다. 앱이 읽는 <strong>알림 내용과 알림 기록은 사용자 기기 안에서만 처리·저장</strong>되며 개발자의 서버나 제3자에게 전송되지 않습니다.</p>
+
+<h2>1. 처리하는 정보</h2>
+<table>
+  <tr><th>항목</th><th>처리 방식</th><th>저장 위치</th></tr>
+  <tr><td>다른 앱의 알림 (앱 이름, 제목, 보낸 사람, 대화방 이름, 내용, 시각, 알림 버튼)</td><td>사용자가 만든 규칙(쿨다운, 무음, 모아 받기, 읽어주기, 자동 답장 등)을 적용하고 알림 기록·삭제된 메시지 보관·광고 정리·결제 알림 모아보기·통계 기능을 제공하기 위해 기기 안에서 처리합니다. 사용자는 '기록하지 않을 앱'을 지정하거나 기록을 언제든 지울 수 있습니다.</td><td>사용자 기기. 서버로 전송하지 않음</td></tr>
+  <tr><td>규칙과 앱 설정 (규칙, 소리 담당 앱, 모아 받기 시각, 자동 쉿 시간, 이름, 언어, 테마, 잠금 여부)</td><td>앱 기능 제공을 위해 기기 안에 저장</td><td>사용자 기기</td></tr>
+  <tr><td>설치된 앱 목록과 아이콘</td><td>규칙을 만들 때 앱을 고를 수 있도록 화면에만 표시합니다. 저장·전송하지 않습니다.</td><td>저장하지 않음</td></tr>
+  <tr><td>익명 사용 통계</td><td>앱 개선을 위해 Firebase Analytics 로 앱 실행, 화면 이동, 기능 사용 여부(예: 규칙 만들기, 쉿 모드 사용 시간, 추천 규칙 종류) 등 비식별 통계와 앱 설치별 무작위 ID(앱 인스턴스 ID), IP 주소에서 추정한 국가·도시 수준의 대략적인 위치를 수집합니다. <strong>알림 내용, 보낸 사람, 대화방 이름, 앱 이름, 결제 금액은 포함되지 않습니다.</strong> 광고 ID 는 수집하지 않습니다.</td><td>Google Firebase</td></tr>
+</table>
+
+<h2>2. 앱 권한</h2>
+<ul>
+  <li><strong>알림 접근 (알림 리스너)</strong>: 다른 앱의 알림을 읽어 규칙을 적용하고 기록하기 위해 사용합니다. 사용자가 시스템 설정에서 직접 허용해야 하며 언제든 끌 수 있습니다.</li>
+  <li><strong>알림 표시</strong>: 중요 알람, 다시 알림, 가린 알림, 쉿 모드 상태를 표시합니다.</li>
+  <li><strong>진동 · 화면 켜기(WAKE_LOCK)</strong>: 규칙에 따라 진동을 울리거나 잠깐 화면을 켭니다.</li>
+  <li><strong>배터리 최적화 제외 요청</strong>: 시스템이 알림 엔진을 멈추지 않도록 사용자가 선택할 수 있게 안내합니다.</li>
+  <li><strong>생체 인증</strong>: 사용자가 '기록 잠금'을 켠 경우에만 사용합니다. 생체 정보는 운영체제가 처리하며 앱은 접근하지 않습니다.</li>
+  <li><strong>인터넷 · 네트워크 상태</strong>: 익명 사용 통계 전송과 '와이파이 연결' 조건 확인에만 사용합니다. 알림 내용은 전송하지 않습니다.</li>
+</ul>
+<p>자동 답장과 버튼 누르기는 사용자가 규칙으로 켠 경우에만, 해당 알림이 제공하는 답장·버튼 기능을 통해 동작합니다. 인증번호 복사는 숫자만 기기 클립보드에 넣습니다.</p>
+
+<h2>3. 제3자 제공 및 위탁</h2>
+<p>알림 내용과 기록을 제3자에게 제공하거나 판매하지 않으며, 광고 목적으로 사용하지 않습니다. 익명 사용 통계는 Google LLC 의 Firebase Analytics 가 처리하며, <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 개인정보처리방침</a>을 따릅니다.</p>
+
+<h2>4. 보유 및 파기</h2>
+<p>알림 기록은 사용자가 정한 보관 기간(기본 30일)이 지나면 자동으로 삭제되며, 설정의 '기록 모두 지우기'나 대화별 삭제로 언제든 지울 수 있습니다. 앱을 삭제하면 기기에 저장된 모든 데이터가 함께 삭제됩니다. 기기 백업(Android 자동 백업)에는 포함되지 않습니다.</p>
+
+<h2>5. 삭제된 메시지 보관에 관하여</h2>
+<p>앱은 기기에 도착한 알림만 기록합니다. 상대가 메시지를 삭제하기 전에 알림으로 받은 내용이 기기 안에 남아 있을 뿐, 메신저 서버나 다른 사람의 기기에 접근하지 않습니다. 기록된 내용은 사용자 본인의 기기 밖으로 나가지 않습니다. 다른 사람의 대화 내용을 공개하거나 악용하지 마세요.</p>
+
+<h2>6. 아동</h2>
+<p>앱은 만 14세 미만 아동을 대상으로 하지 않습니다.</p>
+
+<h2>7. 문의</h2>
+<p>개인정보 관련 문의: <a href="mailto:quaiton89@gmail.com">quaiton89@gmail.com</a> · 점점스튜디오</p>
+
+<hr>
+
+<h1>Shh Privacy Policy</h1>
+<p class="meta">Effective: October 12, 2026</p>
+
+<p>Shh ("the app") is a notification manager that works without an account. It shows no ads and has no payments. <strong>Notification content and notification history are processed and stored only on your device</strong> and are never sent to the developer's servers or third parties.</p>
+
+<h2>1. Information processed</h2>
+<ul>
+  <li><strong>Other apps' notifications</strong> (app name, title, sender, chat name, text, time, action buttons): processed on the device to apply your rules (cooldown, silence, digest, read aloud, auto-reply, etc.) and to provide history, deleted-message keeping, ad cleanup, payment log and statistics. You can exclude apps from history and delete history at any time.</li>
+  <li><strong>Rules and settings</strong>: stored on the device.</li>
+  <li><strong>Installed app list and icons</strong>: shown on screen when choosing apps for a rule; not stored or transmitted.</li>
+  <li><strong>Anonymous usage statistics</strong> via Firebase Analytics: app opens, screen views and feature usage, an app-instance ID and approximate location (country/city) inferred from IP. <strong>No notification content, senders, chat names, app names or payment amounts are included.</strong> No advertising ID is collected.</li>
+</ul>
+
+<h2>2. Permissions</h2>
+<p>Notification access (to read notifications and apply rules; granted by you in system settings), post notifications, vibrate, wake lock, battery-optimization exemption request, biometrics (only if you enable History lock), internet and network state (analytics and the Wi-Fi condition only).</p>
+
+<h2>3. Sharing</h2>
+<p>We never share or sell notification content or history and never use it for advertising. Anonymous statistics are processed by Google Firebase under the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</p>
+
+<h2>4. Retention</h2>
+<p>History is deleted automatically after the retention period you choose (30 days by default) and can be cleared any time. Uninstalling the app deletes all data. Data is excluded from Android auto-backup.</p>
+
+<h2>5. Children</h2>
+<p>The app is not directed to children under 14.</p>
+
+<h2>6. Contact</h2>
+<p><a href="mailto:quaiton89@gmail.com">quaiton89@gmail.com</a> · jeomjeom studio</p>
+
+</body>
+</html>
