@@ -21,7 +21,7 @@
 <body>
 
 <h1>갑자 개인정보처리방침</h1>
-<p class="meta">시행일: 2026년 10월 16일</p>
+<p class="meta">시행일: 2026년 10월 16일 (궁합 초대 링크·위젯 추가 반영)</p>
 <div class="lang">English version below.</div>
 
 <p>갑자(이하 "앱")는 회원가입 없이 사용하는 사주·운세 앱입니다. 사용자가 입력한 <strong>이름(또는 별명), 성별, 생년월일시는 사용자 기기 안에서만 저장·계산</strong>되며 개발자의 서버나 제3자에게 전송되지 않습니다. 앱에는 결제가 없습니다.</p>
@@ -31,7 +31,10 @@
   <tr><th>항목</th><th>처리 방식</th><th>저장 위치</th></tr>
   <tr><td>사람 정보 (이름 또는 별명, 성별, 양력·음력 생년월일, 태어난 시각, 윤달 여부)</td><td>사주 원국, 오늘의 운세, 신년운세, 궁합 등을 기기 안에서 계산하기 위해 사용합니다. 여러 사람을 등록할 수 있으며 언제든 고치거나 지울 수 있습니다.</td><td>사용자 기기. 서버로 전송하지 않음</td></tr>
   <tr><td>앱 설정 (진태양시 보정, 야자시, 알림 시각)과 오늘의 타로 기록</td><td>앱 기능 제공을 위해 기기 안에 저장</td><td>사용자 기기</td></tr>
-  <tr><td>익명 사용 통계</td><td>앱 개선을 위해 Firebase Analytics 로 앱 실행, 화면 이동, 기능 사용 여부(예: 첫 설정 완료, 타로 뽑기, 카드 공유)와 앱 설치별 무작위 ID(앱 인스턴스 ID), IP 주소에서 추정한 국가·도시 수준의 대략적인 위치를 수집합니다. 첫 설정 완료 시 "태어난 시각을 입력했는지", "음력으로 입력했는지"의 예/아니오만 보냅니다. <strong>이름, 성별, 생년월일시, 사주 결과는 포함되지 않습니다.</strong> 광고 ID 는 수집하지 않습니다.</td><td>Google Firebase</td></tr>
+  <tr><td>궁합 초대 링크</td><td>사용자가 '궁합 보자고 링크 보내기'를 눌러 확인한 경우에만, 고른 사람의 이름(또는 별명)·성별·생년월일시를 링크 주소의 # 뒤에 담아 사용자가 고른 메신저로 보냅니다. # 뒤의 내용은 웹 서버로 전송되지 않으며, 링크를 받은 사람의 기기에서만 읽힙니다. 받은 사람이 궁합을 보면 그 기기의 사람 목록에 저장됩니다.</td><td>보낸 사람이 고른 상대의 기기</td></tr>
+  <tr><td>설치 경로 정보 (Play 설치 리퍼러)</td><td>초대 링크를 통해 앱을 처음 설치한 경우, 초대 내용을 이어서 보여 주기 위해 Google Play 가 전달하는 설치 경로 값을 첫 실행 때 한 번 읽습니다. 서버로 보내지 않습니다.</td><td>사용자 기기</td></tr>
+  <tr><td>홈 화면 위젯</td><td>위젯에 오늘의 일진과 운세 요약을 보여 주기 위해 앞으로 30일치 요약을 기기 안에 저장합니다.</td><td>사용자 기기</td></tr>
+  <tr><td>익명 사용 통계</td><td>앱 개선을 위해 Firebase Analytics 로 앱 실행, 화면 이동, 기능 사용 여부(예: 첫 설정 완료, 타로 뽑기, 카드 공유, 초대 링크 보내기·열기, 위젯 추가, 근거 보기, 궁합 점수의 10점 단위 구간)와 앱 설치별 무작위 ID(앱 인스턴스 ID), IP 주소에서 추정한 국가·도시 수준의 대략적인 위치를 수집합니다. 첫 설정 완료 시 "태어난 시각을 입력했는지", "음력으로 입력했는지"의 예/아니오만 보냅니다. <strong>이름, 성별, 생년월일시, 사주 결과는 포함되지 않습니다.</strong> 광고 ID 는 수집하지 않습니다.</td><td>Google Firebase</td></tr>
   <tr><td>오류 보고</td><td>앱이 비정상 종료되면 Firebase Crashlytics 로 오류 기록(코드 위치, 기기 모델, OS 버전, 앱 버전, 무작위 설치 ID)을 보냅니다. 입력한 정보는 포함되지 않습니다.</td><td>Google Firebase</td></tr>
 </table>
 
@@ -69,6 +72,9 @@
 <ul>
   <li><strong>People you add</strong> (name or nickname, gender, solar/lunar birth date, birth time, leap-month flag): used on the device to calculate charts and readings. You can edit or delete them at any time.</li>
   <li><strong>Settings and daily tarot record</strong>: stored on the device.</li>
+  <li><strong>Compatibility invite links</strong>: only when you tap "send invite" and confirm, the chosen person's name, gender and birth date/time are placed after the # of the link and sent through the messenger you pick. The part after # is never sent to a web server; it is read only on the recipient's device.</li>
+  <li><strong>Play install referrer</strong>: if the app is installed through an invite link, the install referrer is read once on first launch to continue the invite. It is not transmitted.</li>
+  <li><strong>Home-screen widget</strong>: a 30-day summary is stored on the device for the widget.</li>
   <li><strong>Anonymous usage statistics</strong> via Firebase Analytics: app opens, screen views and feature usage, an app-instance ID and approximate location (country/city) inferred from IP. On first setup we send only yes/no flags for "birth time entered" and "lunar date used". <strong>No names, gender, birth dates/times or chart results are included.</strong> No advertising ID is collected.</li>
   <li><strong>Crash reports</strong> via Firebase Crashlytics: stack trace, device model, OS and app version, random installation ID. No entered information is included.</li>
 </ul>
