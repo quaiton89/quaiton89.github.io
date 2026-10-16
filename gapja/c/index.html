@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>갑자 · 궁합 보기</title>
+<meta property="og:title" content="우리 궁합 보자 · 갑자">
+<meta property="og:description" content="링크를 열면 두 사람의 사주 궁합이 바로 나와요.">
+<meta property="og:image" content="https://quaiton89.github.io/images/apps/gapja.png">
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body { margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 24px 16px; background: #14120E; color: #ECE5D3; font: 16px/1.7 -apple-system, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; }
+  .card { width: 100%; max-width: 420px; border: 1px solid #5A4B32; padding: 32px 24px; }
+  .seal { width: 52px; height: 52px; background: #B3362B; color: #F6EBDD; display: flex; align-items: center; justify-content: center; font: 900 28px/1 "Noto Serif KR", serif; border-radius: 3px; }
+  h1 { font: 700 24px/1.4 "Noto Serif KR", serif; margin: 20px 0 8px; }
+  p { color: #9C927F; font-size: 14px; margin: 0 0 24px; }
+  a.btn { display: block; text-align: center; text-decoration: none; padding: 15px; margin-top: 10px; font-weight: 700; letter-spacing: 1px; }
+  a.primary { background: #B3362B; color: #F6EBDD; }
+  a.secondary { border: 1px solid #3A3226; color: #ECE5D3; }
+  .note { margin-top: 20px; font-size: 12px; color: #6E6658; }
+  .err { color: #D0574A; }
+</style>
+</head>
+<body>
+<main class="card">
+  <div class="seal" aria-hidden="true">合</div>
+  <h1 id="title">궁합을 보자는 초대가 왔어요</h1>
+  <p id="desc">갑자 앱에서 열면 두 사람의 사주 궁합이 바로 나와요.</p>
+  <a class="btn primary" id="open" href="#">갑자 앱에서 궁합 보기</a>
+  <a class="btn secondary" id="store" href="https://play.google.com/store/apps/details?id=com.gapja.saju">Play 스토어에서 갑자 받기</a>
+  <p class="note">링크에 담긴 생년월일시는 이 페이지에서 서버로 보내지지 않으며, 앱에서만 쓰입니다.</p>
+</main>
+<script>
+(function () {
+  var d = (location.hash || '').replace(/^#/, '');
+  var title = document.getElementById('title');
+  var open = document.getElementById('open');
+  var store = document.getElementById('store');
+  if (!/^[A-Za-z0-9_-]{10,600}$/.test(d)) {
+    title.textContent = '링크가 올바르지 않아요';
+    document.getElementById('desc').innerHTML = '<span class="err">초대 링크 전체를 다시 복사해 열어 주세요.</span>';
+    open.style.display = 'none';
+    return;
+  }
+  try {
+    var json = decodeURIComponent(escape(atob(d.replace(/-/g, '+').replace(/_/g, '/') + '==='.slice((d.length + 3) % 4))));
+    var m = JSON.parse(json);
+    if (m && m.n) title.textContent = String(m.n).slice(0, 20) + ' 님이 궁합을 보자고 했어요';
+  } catch (e) {}
+  var play = 'https://play.google.com/store/apps/details?id=com.gapja.saju&referrer=' + encodeURIComponent('d=' + d);
+  store.href = play;
+  var isAndroid = /Android/i.test(navigator.userAgent);
+  if (isAndroid) {
+    open.href = 'intent://compat?d=' + d + '#Intent;scheme=gapja;package=com.gapja.saju;S.browser_fallback_url=' + encodeURIComponent(play) + ';end';
+  } else {
+    open.href = play;
+    open.textContent = '안드로이드 휴대폰에서 열어 주세요';
+  }
+})();
+</script>
+</body>
+</html>
