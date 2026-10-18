@@ -26,7 +26,7 @@
 <div class="lang">English version below. · 日本語・中文のお問い合わせは英語または韓国語でお願いします。</div>
 
 <p>또박(이하 "앱")은 회원가입 없이 쓰는 자동 가계부입니다. 카드·은행·간편결제 알림과 문자 알림을 읽어 기기 안의 장부에 적습니다.</p>
-<p class="key"><strong>앱에는 인터넷 권한이 없습니다.</strong> 알림 내용과 가계부 기록은 사용자 기기 안에서만 처리·저장되며, 개발자의 서버나 제3자에게 전송될 수 없습니다. 앱에는 광고, 분석 도구, 회원 계정이 없습니다.</p>
+<p class="key"><strong>알림 내용과 가계부 기록은 기기 밖으로 보내지 않습니다.</strong> 알림 원문, 금액, 가게 이름, 카드·계좌 정보, 메모는 사용자 기기 안에서만 처리·저장되며 개발자의 서버나 제3자에게 전송되지 않습니다. 앱 개선을 위해 기능 이용 통계와 오류 보고만 Google Firebase 로 보내며, 여기에도 가계부 내용은 들어가지 않습니다. 앱에는 광고와 회원 계정이 없습니다.</p>
 
 <h2>1. 처리하는 정보</h2>
 <table>
@@ -34,6 +34,8 @@
   <tr><td>다른 앱의 알림 (앱 이름, 제목·보낸 사람, 내용, 시각)</td><td>결제·입출금 알림인지 판단하고 금액·가게 이름·카드사·시각을 읽어 장부에 적기 위해 기기 안에서 처리합니다. 금융 알림이 아닌 알림은 저장하지 않습니다. 거래로 적힌 알림과 '못 읽은 알림'(거래 같지만 읽지 못한 알림, 7일 보관)의 원문은 사용자가 확인·수정할 수 있도록 기록과 함께 저장됩니다.</td><td>사용자 기기</td></tr>
   <tr><td>가계부 기록 (금액, 가게 이름, 분류, 카드·계좌 끝자리, 할부, 잔액, 메모)</td><td>장부·통계·예산·위젯 기능 제공</td><td>사용자 기기</td></tr>
   <tr><td>설정 (한 달 시작일, 예산, 분류, 고정 지출, 자주 쓰는 항목, 카드 결제일, 잠금 여부, 화면 테마)</td><td>앱 기능 제공</td><td>사용자 기기</td></tr>
+  <tr><td>이용 통계</td><td>앱 개선을 위해 Firebase Analytics 로 앱 실행, 화면 이동, 기능 사용 여부(예: 첫 설정 단계, 알림 접근 허용 여부, 직접 적기, 기록 수정·삭제, 백업·내보내기, 설정 변경 항목 이름), 기록 개수의 구간(예: 10~49건), 앱 설치별 무작위 ID(앱 인스턴스 ID), IP 주소에서 추정한 국가·도시 수준의 대략적인 위치를 수집합니다. <strong>알림 원문, 금액, 가게 이름, 분류, 카드·계좌 정보, 메모, 예산 금액은 포함되지 않습니다.</strong> 광고 ID 는 수집하지 않습니다.</td><td>Google Firebase</td></tr>
+  <tr><td>오류 보고</td><td>앱이 비정상 종료되면 Firebase Crashlytics 로 오류 기록(코드 위치, 기기 모델, OS 버전, 앱 버전, 무작위 설치 ID)을 보냅니다. 가계부 내용은 포함되지 않습니다.</td><td>Google Firebase</td></tr>
 </table>
 
 <h2>2. 앱 권한</h2>
@@ -47,7 +49,7 @@
 <p>앱은 문자(SMS) 읽기 권한을 요청하지 않습니다. 문자 앱이 띄운 알림만 읽습니다.</p>
 
 <h2>3. 제3자 제공</h2>
-<p>앱은 어떤 정보도 제3자에게 제공하거나 판매하지 않습니다. 인터넷 권한이 없어 기술적으로도 전송할 수 없습니다.</p>
+<p>알림 내용과 가계부 기록은 누구에게도 제공하거나 판매하지 않으며, 광고 목적으로 사용하지 않습니다. 이용 통계와 오류 보고는 Google LLC 의 Firebase 가 처리하며, <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 개인정보처리방침</a>을 따릅니다. 이 정보는 국외(미국 등 Google 데이터센터)에서 처리될 수 있습니다.</p>
 
 <h2>4. 사용자가 직접 내보내는 경우</h2>
 <ul>
@@ -57,7 +59,7 @@
 </ul>
 
 <h2>5. 보유 및 파기</h2>
-<p>기록은 사용자가 지우기 전까지 기기에 남습니다. 지운 기록은 30일 뒤 완전히 삭제되고, 못 읽은 알림은 7일 뒤 삭제됩니다. 앱을 삭제하면 기기에 저장된 모든 데이터가 함께 삭제됩니다.</p>
+<p>기록은 사용자가 지우기 전까지 기기에 남습니다. 이용 통계는 Firebase 에서 최대 14개월, 오류 보고는 90일 보관됩니다. 지운 기록은 30일 뒤 완전히 삭제되고, 못 읽은 알림은 7일 뒤 삭제됩니다. 앱을 삭제하면 기기에 저장된 모든 데이터가 함께 삭제됩니다.</p>
 
 <h2>6. 아동</h2>
 <p>앱은 만 14세 미만 아동을 대상으로 하지 않습니다.</p>
@@ -71,25 +73,27 @@
 <p class="meta">Effective: October 18, 2026</p>
 
 <p>Ttobak ("the app") is an automatic expense ledger that works without an account. It reads card, bank and payment notifications (including text-message notifications) and records them in a ledger on your device.</p>
-<p class="key"><strong>The app has no internet permission.</strong> Notification content and ledger records are processed and stored only on your device and cannot be sent to the developer's servers or third parties. The app has no ads, no analytics and no accounts.</p>
+<p class="key"><strong>Notification content and ledger records never leave your device.</strong> Alert text, amounts, merchants, card/account details and memos are processed and stored only on your device and are not sent to the developer's servers or third parties. To improve the app, only feature-usage statistics and crash reports are sent to Google Firebase, without any ledger content. The app has no ads and no accounts.</p>
 
 <h2>1. Information processed</h2>
 <ul>
   <li><strong>Other apps' notifications</strong> (app name, title/sender, text, time): processed on the device to detect payments and read the amount, merchant, issuer and time. Non-financial notifications are not stored. The original text of recorded notifications and of "unread alerts" (financial-looking alerts that could not be read, kept for 7 days) is stored with the record so you can review it.</li>
   <li><strong>Ledger records and settings</strong>: stored on the device.</li>
+  <li><strong>Usage statistics</strong> via Firebase Analytics: app opens, screen views and feature usage (e.g. setup steps, whether notification access is on, manual entries, edits/deletes, backup/export, names of changed settings), record-count ranges (e.g. 10–49), an app-instance ID and approximate location (country/city) inferred from IP. <strong>No alert text, amounts, merchants, categories, card/account details, memos or budget amounts are included.</strong> No advertising ID is collected.</li>
+  <li><strong>Crash reports</strong> via Firebase Crashlytics: stack trace, device model, OS and app version, random installation ID. No ledger content is included.</li>
 </ul>
 
 <h2>2. Permissions</h2>
 <p>Notification access (granted by you in system settings; on first grant, payment notifications still in the shade from the last 7 days are recorded), post notifications, battery-optimization exemption request, run at startup and background work (connection check every 15 minutes, fixed costs and widget), biometrics (only if you enable App lock). The app does not request SMS permissions.</p>
 
 <h2>3. Sharing</h2>
-<p>No information is shared with or sold to anyone. Without internet permission, the app cannot transmit data.</p>
+<p>Notification content and ledger records are never shared, sold or used for advertising. Statistics and crash reports are processed by Google Firebase under the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a> and may be processed outside Korea (e.g. in the US).</p>
 
 <h2>4. When you export</h2>
 <p>CSV export and backup files go only where you choose. Google auto backup is off by default; if you turn it on, your ledger and settings are included in Android's system backup to your own Google account (encrypted on devices with a screen lock). The developer cannot access it. Sharing unread alert texts happens only when you tap "Share these texts".</p>
 
 <h2>5. Retention</h2>
-<p>Records stay on your device until you delete them; deleted records are purged after 30 days. Unread alerts are deleted after 7 days. Uninstalling the app deletes all data.</p>
+<p>Records stay on your device until you delete them. Usage statistics are kept up to 14 months and crash reports 90 days in Firebase; deleted records are purged after 30 days. Unread alerts are deleted after 7 days. Uninstalling the app deletes all data.</p>
 
 <h2>6. Children</h2>
 <p>The app is not directed to children under 14.</p>
