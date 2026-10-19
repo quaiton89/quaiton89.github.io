@@ -128,6 +128,43 @@
             color: var(--muted);
         }
 
+        .featured {
+            padding-bottom: 56px;
+        }
+
+        .featured ul {
+            grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+            gap: 16px;
+        }
+
+        .featured li a {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 14px;
+            height: 100%;
+            padding: 20px;
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            font-size: 17px;
+            transition: border-color 0.15s;
+        }
+
+        .featured li a:hover {
+            border-color: var(--ink);
+        }
+
+        .featured img {
+            width: 64px;
+            height: 64px;
+            border-radius: 16px;
+        }
+
+        .featured small {
+            margin-top: 4px;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
         .apps .soon {
             display: inline-block;
             margin-left: 4px;
@@ -173,16 +210,25 @@
             <p>점점스튜디오는 일상에서 쓰는 모바일 앱을 만들고, 꾸준히 다듬고 있습니다.</p>
         </main>
 
-        <section class="apps" aria-labelledby="apps-title">
-            <h2 id="apps-title">만든 앱</h2>
+        <section class="apps featured" aria-labelledby="featured-title">
+            <h2 id="featured-title">대표 앱</h2>
             <ul>
                 <li><a href="https://play.google.com/store/apps/details?id=com.MyDays.lifelog"><img src="images/apps/days.png" alt=""><span>Days<small>중요한 날을 세는 디데이 위젯</small></span></a></li>
                 <li><a href="https://play.google.com/store/apps/details?id=com.chagokchagok.lifelog"><img src="images/apps/chagok.png" alt=""><span>차곡차곡<small>용돈 기입장과 저축 챌린지</small></span></a></li>
+                <li><a href="https://play.google.com/store/apps/details?id=com.weighttracker.lifelog"><img src="images/apps/harucheck.png" alt=""><span>하루체크<small>체중 기록과 간헐적 단식 타이머</small></span></a></li>
+                <li><a href="https://play.google.com/store/apps/details?id=com.kkotdal.cycle"><img src="images/apps/kkotdal.png" alt=""><span>꽃달<small>생리 주기 다이어리</small></span></a></li>
+                <li><a href="https://play.google.com/store/apps/details?id=com.jinannal.camera"><img src="images/apps/filmharu.png" alt=""><span>필름하루<small>찍는 순간 필름 사진이 되는 빈티지 카메라</small></span></a></li>
+            </ul>
+        </section>
+
+        <section class="apps" aria-labelledby="apps-title">
+            <h2 id="apps-title">다른 앱</h2>
+            <ul>
                 <li><a href="https://play.google.com/store/apps/details?id=com.goun.camera"><img src="images/apps/goun.png" alt=""><span>고운<small>자연스러운 뷰티 카메라</small></span></a></li>
-                <li><span><img src="images/apps/kkotdal.png" alt=""><span>꽃달 <em class="soon">Coming soon</em><small>생리 주기 다이어리</small></span></span></li>
-                <li><span><img src="images/apps/gapja.png" alt=""><span>갑자 <em class="soon">Coming soon</em><small>근거를 보여주는 사주·운세</small></span></span></li>
+                <li><a href="https://play.google.com/store/apps/details?id=com.gapja.saju"><img src="images/apps/gapja.png" alt=""><span>갑자<small>근거를 보여주는 사주·운세</small></span></a></li>
                 <li><span><img src="images/apps/ttobak.png" alt=""><span>또박 <em class="soon">Coming soon</em><small>알림으로 저절로 적히는 가계부</small></span></span></li>
                 <li><span><img src="images/apps/sanireum.png" alt=""><span>산이름 <em class="soon">Coming soon</em><small>카메라를 들면 봉우리 이름이 보이는 오프라인 산 안내</small></span></span></li>
+                <li><span><img src="images/apps/kkomul.png" alt=""><span>꼬물 <em class="soon">Coming soon</em><small>한 번 올리면 온 가족이 함께 보는 아기 성장 앨범</small></span></span></li>
             </ul>
         </section>
 
