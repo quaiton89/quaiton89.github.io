@@ -146,17 +146,62 @@
             border: 1px solid var(--line);
             border-radius: 16px;
             font-size: 17px;
-            transition: border-color 0.15s;
+            background: var(--bg);
+            transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.25s ease, border-color 0.25s ease;
         }
 
-        .featured li a:hover {
-            border-color: var(--ink);
+        .featured li a:hover,
+        .featured li a:focus-visible {
+            transform: translateY(-4px);
+            border-color: transparent;
+            box-shadow: 0 2px 6px rgba(17, 17, 17, 0.05), 0 14px 32px rgba(17, 17, 17, 0.10);
         }
 
         .featured img {
             width: 64px;
             height: 64px;
             border-radius: 16px;
+            transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+
+        .featured li a:hover img,
+        .featured li a:focus-visible img {
+            transform: scale(1.06) rotate(-3deg);
+        }
+
+        .apps:not(.featured) li a {
+            margin: -8px;
+            padding: 8px;
+            border-radius: 14px;
+            transition: background-color 0.2s ease;
+        }
+
+        .apps:not(.featured) li a img {
+            transition: transform 0.2s ease;
+        }
+
+        .apps:not(.featured) li a:hover,
+        .apps:not(.featured) li a:focus-visible {
+            background: #F5F5F5;
+        }
+
+        .apps:not(.featured) li a:hover img,
+        .apps:not(.featured) li a:focus-visible img {
+            transform: scale(1.05);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .apps a,
+            .apps img {
+                transition: none !important;
+            }
+
+            .featured li a:hover,
+            .featured li a:focus-visible,
+            .apps li a:hover img,
+            .apps li a:focus-visible img {
+                transform: none;
+            }
         }
 
         .featured small {
