@@ -1,0 +1,81 @@
+{
+ "schema": 1,
+ "packs": [
+  {
+   "id": "autumn",
+   "name": {
+    "ko": "가을 팩",
+    "en": "Autumn Pack",
+    "ja": "秋パック",
+    "zh": "秋季包"
+   },
+   "films": [
+    {
+     "id": "au1",
+     "family": "pk",
+     "iso": 200,
+     "grain": 0.38,
+     "grainSize": 620,
+     "halation": 0.25,
+     "name": {
+      "ko": "단풍",
+      "en": "Maple",
+      "ja": "紅葉",
+      "zh": "枫叶"
+     },
+     "note": {
+      "ko": "붉은 잎이 더 붉게. 깊은 주황 하이라이트",
+      "en": "Redder leaves, deep orange highlights",
+      "ja": "紅葉をより赤く",
+      "zh": "让红叶更红"
+     },
+     "lut": "au1.png"
+    },
+    {
+     "id": "au2",
+     "family": "pk",
+     "iso": 400,
+     "grain": 0.4,
+     "grainSize": 600,
+     "halation": 0.22,
+     "fade": 0.1,
+     "name": {
+      "ko": "은행",
+      "en": "Ginkgo",
+      "ja": "銀杏",
+      "zh": "银杏"
+     },
+     "note": {
+      "ko": "노란 은행잎 거리, 부드러운 금빛",
+      "en": "Golden ginkgo streets, soft gold light",
+      "ja": "銀杏並木の金色",
+      "zh": "银杏大道的金色"
+     },
+     "lut": "au2.png"
+    },
+    {
+     "id": "au3",
+     "family": "pk",
+     "iso": 100,
+     "grain": 0.3,
+     "grainSize": 740,
+     "halation": 0.12,
+     "fade": 0.2,
+     "name": {
+      "ko": "첫서리",
+      "en": "First Frost",
+      "ja": "初霜",
+      "zh": "初霜"
+     },
+     "note": {
+      "ko": "서늘한 아침, 푸른 그림자와 바랜 색",
+      "en": "Chilly mornings, blue shadows, faded colour",
+      "ja": "冷えた朝の青い影",
+      "zh": "清冷早晨·蓝色阴影"
+     },
+     "lut": "au3.png"
+    }
+   ]
+  }
+ ]
+}
