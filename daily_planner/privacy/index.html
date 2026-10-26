@@ -20,7 +20,7 @@
 <body>
 
 <h1>데일리 플래너 개인정보처리방침</h1>
-<p class="meta">시행일: 2026년 10월 9일</p>
+<p class="meta">시행일: 2026년 10월 26일</p>
 <div class="lang">English version below. · 日本語・中文のお問い合わせは英語または韓国語でお願いします。</div>
 
 <p>데일리 플래너(이하 "앱")는 회원가입 없이 사용하는 일정·루틴 관리 앱입니다. 사용자가 입력한 일정, 루틴, 할 일은 사용자 기기 안에만 저장되며 개발자의 서버로 전송되지 않습니다.</p>
@@ -28,7 +28,9 @@
 <h2>1. 처리하는 정보</h2>
 <table>
   <tr><th>항목</th><th>처리 방식</th><th>저장 위치</th></tr>
-  <tr><td>일정 · 루틴 · 인박스 할 일 (제목, 시간, 색상, 메모, 완료 여부)</td><td>앱 기능 제공을 위해 기기 안에 저장</td><td>사용자 기기. 서버로 전송하지 않음</td></tr>
+  <tr><td>일정 · 루틴 · 인박스 할 일 (제목, 시간, 색상, 메모, 체크리스트, 완료 여부)</td><td>앱 기능 제공을 위해 기기 안에 저장</td><td>사용자 기기. 서버로 전송하지 않음</td></tr>
+  <tr><td>기기 캘린더 일정 (사용자가 연결한 경우에만)</td><td>기기에 등록된 캘린더 일정을 앱 화면에 함께 보여 주기 위해 읽기만 함. 앱에 따로 저장하지 않고, 수정·삭제하지 않음</td><td>앱 실행 중 메모리에서만 사용. 서버로 전송하지 않음</td></tr>
+  <tr><td>백업 파일</td><td>사용자가 '백업 내보내기'를 실행하면 일정·루틴·설정을 파일로 저장</td><td>사용자가 고른 위치 (기기, 클라우드 드라이브 등)</td></tr>
   <tr><td>홈 화면 위젯 데이터</td><td>위젯에 지금/다음 일정을 표시하기 위해 7일치 일정을 기기 안에 저장</td><td>사용자 기기</td></tr>
   <tr><td>앱 설정 (언어, 테마, 알림, 하루 시작 시각 등)</td><td>사용자 편의를 위해 기기 안에 저장</td><td>사용자 기기</td></tr>
   <tr><td>익명 사용 통계</td><td>Firebase Analytics 를 통해 앱 실행, 화면 사용 등 비식별 통계를 수집할 수 있음. 일정 내용은 포함되지 않음</td><td>Google Firebase</td></tr>
@@ -38,14 +40,17 @@
 <ul>
   <li><strong>알림</strong>: 일정 시작 전 알림을 보내기 위해 사용합니다.</li>
   <li><strong>정확한 알람 · 부팅 완료 수신</strong>: 설정한 시각에 알림이 정확히 울리고, 기기를 다시 켠 뒤에도 알림이 유지되도록 사용합니다.</li>
-  <li><strong>인터넷</strong>: 익명 사용 통계 전송에 사용합니다.</li>
+  <li><strong>캘린더</strong>: 기기 캘린더 일정을 앱에 함께 표시하기 위해 사용합니다. 이 기능을 켤 때만 요청하며, 일정을 읽기만 합니다. 캘린더 플러그인 요구 사항 때문에 쓰기 권한도 함께 선언되어 있지만, 앱은 캘린더에 일정을 만들거나 바꾸거나 지우지 않습니다.</li>
+  <li><strong>인터넷</strong>: 익명 사용 통계 전송과 Google Play 업데이트 확인에 사용합니다.</li>
 </ul>
 
 <h2>3. 제3자 제공 및 위탁</h2>
 <p>사용자의 일정 데이터를 제3자에게 제공하거나 판매하지 않습니다. 앱은 광고를 표시하지 않습니다. 익명 사용 통계는 Google LLC 의 Firebase Analytics 가 처리하며, 해당 처리는 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 개인정보처리방침</a>을 따릅니다.</p>
+<p>앱은 Google Play 의 앱 내 업데이트와 앱 내 리뷰 기능을 사용해 새 버전 안내와 평가 요청을 표시합니다. 이 과정은 Google Play 가 처리하며 일정 내용은 전달되지 않습니다.</p>
+<p>Android 기기의 자동 백업이 켜져 있으면, 앱 데이터가 Android 백업 기능을 통해 사용자 본인의 Google 계정에 암호화되어 백업될 수 있습니다. 이 백업은 기기 설정에서 끌 수 있으며 개발자는 백업 내용에 접근할 수 없습니다.</p>
 
 <h2>4. 보유 및 파기</h2>
-<p>일정 데이터는 사용자가 삭제하거나 앱의 '모든 데이터 초기화'를 실행할 때까지 기기에 보관됩니다. 앱을 삭제하면 기기에 저장된 모든 데이터가 함께 삭제됩니다.</p>
+<p>일정 데이터는 사용자가 삭제하거나 앱의 '모든 데이터 초기화'를 실행할 때까지 기기에 보관됩니다. 앱을 삭제하면 기기에 저장된 모든 데이터가 함께 삭제됩니다. 사용자가 내보낸 백업 파일과 Android 자동 백업은 사용자가 직접 관리하며, 앱 삭제와 함께 지워지지 않습니다.</p>
 
 <h2>5. 아동의 개인정보</h2>
 <p>앱은 만 14세 미만 아동을 대상으로 하지 않으며, 아동의 개인정보를 의도적으로 수집하지 않습니다.</p>
@@ -59,14 +64,16 @@
 <hr>
 
 <h1>Daily Planner Privacy Policy</h1>
-<p class="meta">Effective: October 9, 2026</p>
+<p class="meta">Effective: October 26, 2026</p>
 
 <p>Daily Planner (the "App") is a schedule and routine planner that works without an account. The schedules, routines, and tasks you enter are stored only on your device and are never sent to the developer's servers.</p>
 
 <h2>1. Information we process</h2>
 <table>
   <tr><th>Data</th><th>How it is used</th><th>Where it is stored</th></tr>
-  <tr><td>Schedules, routines, inbox tasks (title, time, color, note, completion)</td><td>Saved to provide the App's features</td><td>Your device. Never uploaded</td></tr>
+  <tr><td>Schedules, routines, inbox tasks (title, time, color, note, checklist, completion)</td><td>Saved to provide the App's features</td><td>Your device. Never uploaded</td></tr>
+  <tr><td>Device calendar events (only if you connect them)</td><td>Read only, so events from calendars on your device can be shown alongside your schedules. Not saved by the App, and never edited or deleted</td><td>Used in memory while the App runs. Never uploaded</td></tr>
+  <tr><td>Backup files</td><td>When you use "Export backup", your schedules, routines, and settings are saved to a file</td><td>The location you choose (your device, a cloud drive, …)</td></tr>
   <tr><td>Home screen widget data</td><td>Seven days of schedules saved so the widget can show what's now and next</td><td>Your device</td></tr>
   <tr><td>App settings (language, theme, reminders, day start time, …)</td><td>Saved for your convenience</td><td>Your device</td></tr>
   <tr><td>Anonymous usage statistics</td><td>Firebase Analytics may collect non-identifying statistics such as app opens and screen usage. Your schedule contents are not included</td><td>Google Firebase</td></tr>
@@ -76,14 +83,17 @@
 <ul>
   <li><strong>Notifications</strong>: to remind you before a schedule starts.</li>
   <li><strong>Exact alarms and boot completed</strong>: so reminders fire on time and survive a device restart.</li>
-  <li><strong>Internet</strong>: to send anonymous usage statistics.</li>
+  <li><strong>Calendar</strong>: to show events from your device calendars in the App. Requested only when you turn this on, and used read only. The write permission is also declared because the calendar plugin requires it, but the App never creates, changes, or deletes calendar events.</li>
+  <li><strong>Internet</strong>: to send anonymous usage statistics and check Google Play for updates.</li>
 </ul>
 
 <h2>3. Third parties</h2>
 <p>We do not share or sell your schedule data. The App does not show ads. Anonymous usage statistics are processed by Google LLC's Firebase Analytics under the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</p>
+<p>The App uses Google Play's in-app updates and in-app review to tell you about new versions and ask for a rating. These are handled by Google Play, and your schedule contents are not shared.</p>
+<p>If Android auto backup is on, the App's data may be backed up, encrypted, to your own Google account through Android's backup service. You can turn this off in your device settings, and the developer cannot access these backups.</p>
 
 <h2>4. Retention</h2>
-<p>Your data stays on your device until you delete it or use "Reset all data" in the App. Uninstalling the App deletes all data stored on the device.</p>
+<p>Your data stays on your device until you delete it or use "Reset all data" in the App. Uninstalling the App deletes all data stored on the device. Backup files you export and Android auto backups are managed by you and are not deleted when you uninstall the App.</p>
 
 <h2>5. Children</h2>
 <p>The App is not directed at children under 14 and does not knowingly collect their personal information.</p>
