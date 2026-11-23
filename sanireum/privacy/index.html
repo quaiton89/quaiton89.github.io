@@ -22,10 +22,10 @@
 <body>
 
 <h1>산이름 개인정보처리방침</h1>
-<p class="meta">시행일: 2026년 10월 19일</p>
+<p class="meta">시행일: 2026년 10월 19일 · 개정: 2026년 11월 23일(인앱 구매, 오른 산 기록)</p>
 <div class="lang">English version below.</div>
 
-<p>산이름(이하 "앱")은 카메라 화면 위에 눈앞 능선과 봉우리 이름을 겹쳐 보여 주는 앱입니다. 회원가입이 없고, 개발자의 서버가 없으며, 앱은 인터넷에 접속하지 않습니다.</p>
+<p>산이름(이하 "앱")은 카메라 화면 위에 눈앞 능선과 봉우리 이름을 겹쳐 보여 주는 앱입니다. 회원가입이 없고, 개발자의 서버가 없으며, 앱은 인터넷에 접속하지 않습니다. 유료 기능(산이름 프로)의 결제는 휴대폰의 Google Play 앱이 처리합니다.</p>
 <p class="key"><strong>앱은 개인정보를 수집·저장·전송하지 않습니다.</strong> 위치와 카메라 영상은 봉우리를 계산하고 그리기 위해 기기 안에서만 처리되며, 개발자나 제3자에게 전송되지 않습니다. 앱에는 광고, 분석 도구, 오류 보고 도구, 회원 계정이 없습니다.</p>
 
 <h2>1. 처리하는 정보</h2>
@@ -35,7 +35,10 @@
   <tr><td>카메라 영상</td><td>화면 위에 능선과 이름을 겹쳐 그리고, 능선 모양으로 나침반 오차를 보정하기 위해 기기 안에서 처리합니다. 저장하지 않습니다. "녹화" 중에는 1초에 한 장씩 축소된 화면이 기록 파일에 포함됩니다.</td><td>기기 메모리 (녹화 시 기기 내부 저장소)</td></tr>
   <tr><td>방향·기울기 센서</td><td>카메라가 향한 방향을 알기 위해 사용합니다. "녹화" 중에만 기록 파일에 포함됩니다.</td><td>기기 메모리 (녹화 시 기기 내부 저장소)</td></tr>
   <tr><td>사용자가 고른 사진 ("사진에 겹쳐 보기")</td><td>사용자가 선택한 사진 한 장과 그 사진의 위치·방향 정보(EXIF)를 읽어 능선을 겹쳐 보여 줍니다. 사진은 저장하거나 전송하지 않습니다.</td><td>기기 메모리</td></tr>
-  <tr><td>설정 (GPS 고도 사용, 자동 맞춤 켬·끔)</td><td>앱 기능 제공</td><td>기기 메모리 (앱 종료 시 초기화)</td></tr>
+  <tr><td>오른 산 기록 (프로 "정상 인증")</td><td>사용자가 정상에서 "인증하기"를 누르면 그 봉우리의 이름·높이·좌표와 인증 시각을 기록해 오른 산 모음과 100대 명산 진행을 보여 줍니다. 개발자에게 전송되지 않습니다. 기록 화면에서 하나씩 지울 수 있습니다.</td><td>기기 내부 저장소. 휴대폰의 Google 백업이 켜져 있으면 이 기록 파일만 사용자의 Google 계정 백업에 포함됩니다(아래 4항)</td></tr>
+  <tr><td>인증 카드·이름 새긴 사진 (프로)</td><td>사용자가 저장을 누르면 화면이나 고른 사진에 봉우리 이름·높이·날짜를 새겨 갤러리(Pictures/산이름)에 저장합니다. 위치 정보(EXIF)는 넣지 않습니다.</td><td>기기 갤러리</td></tr>
+  <tr><td>인앱 구매 내역</td><td>산이름 프로를 열어 주기 위해 Google Play 에서 구매 여부를 받아 기기에 기억합니다. 결제(카드·계좌 등)는 Google Play 가 처리하며 앱과 개발자는 결제 정보를 받지 않습니다.</td><td>사용자 기기, Google Play</td></tr>
+  <tr><td>설정 (관측 높이, 라벨 거르기)</td><td>앱 기능 제공</td><td>기기 내부 저장소</td></tr>
 </table>
 
 <h2>2. 앱 권한</h2>
@@ -43,31 +46,34 @@
   <li><strong>카메라</strong>: 산을 비추는 화면 위에 이름을 그리기 위해 사용합니다.</li>
   <li><strong>위치 (정확한 위치)</strong>: 현재 위치에서 보이는 능선을 계산하기 위해 앱이 화면에 떠 있는 동안만 사용합니다. 백그라운드 위치는 사용하지 않습니다.</li>
 </ul>
-<p>앱은 인터넷 권한을 요청하지 않으며, 네트워크에 접속할 수 없습니다.</p>
+<p>앱은 인터넷 권한을 요청하지 않으며, 스스로 네트워크에 접속할 수 없습니다. 인앱 구매는 휴대폰에 설치된 Google Play 앱을 통해 이뤄집니다.</p>
 
 <h2>3. 녹화 기록</h2>
 <p>사용자가 만든 녹화 기록(센서 값, 위치, 축소된 화면)은 기기 내부 저장소에만 보관됩니다. 사용자가 "공유" 또는 "저장" 버튼으로 직접 내보내지 않는 한 어디에도 전송되지 않으며, 내보낸 뒤의 처리는 사용자가 고른 앱·서비스의 정책을 따릅니다. 앱 안에서 삭제할 수 있고, 앱을 삭제하면 함께 삭제됩니다.</p>
 
-<h2>4. 제3자 제공</h2>
-<p>없습니다. 광고·분석·오류 보고 등 제3자 SDK 를 사용하지 않습니다.</p>
+<h2>4. 오른 산 기록의 백업</h2>
+<p>오른 산 기록 파일은 Android 자동 백업 대상입니다. 휴대폰 설정에서 Google 백업을 켠 경우, 이 파일만 사용자의 Google 계정에 암호화되어 백업되고 같은 계정으로 새 휴대폰에 앱을 설치하면 돌아옵니다. 백업은 Android 와 Google 이 처리하며 개발자는 그 내용을 볼 수 없습니다. 녹화 기록·설정·구매 상태는 백업하지 않습니다(구매는 Google Play 에서 다시 확인합니다).</p>
 
-<h2>5. 아동의 개인정보</h2>
+<h2>5. 제3자 제공</h2>
+<p>없습니다. 광고·분석·오류 보고 등 제3자 SDK 를 사용하지 않습니다. 인앱 구매의 결제는 Google Play 가 처리하며, Google 의 개인정보처리방침이 적용됩니다.</p>
+
+<h2>6. 아동의 개인정보</h2>
 <p>앱은 개인정보를 수집하지 않으므로 아동의 개인정보도 수집하지 않습니다.</p>
 
-<h2>6. 데이터 출처</h2>
+<h2>7. 데이터 출처</h2>
 <p>지형: Copernicus DEM GLO-30 (© DLR e.V. 2010-2014 and © Airbus Defence and Space GmbH 2014-2018, provided under COPERNICUS by the European Union and ESA). 봉우리: © OpenStreetMap contributors (ODbL).</p>
 
-<h2>7. 방침 변경</h2>
+<h2>8. 방침 변경</h2>
 <p>이 방침이 바뀌면 이 페이지에 시행일과 함께 게시합니다.</p>
 
-<h2>8. 문의</h2>
+<h2>9. 문의</h2>
 <p>이메일: <a href="mailto:quaiton89@gmail.com">quaiton89@gmail.com</a></p>
 
 <hr>
 
 <h1>Sanireum Privacy Policy</h1>
-<p class="meta">Effective: October 19, 2026</p>
-<p>Sanireum (the "app") overlays the names of mountain peaks on your camera view. It has no account system, no server, and no internet access.</p>
+<p class="meta">Effective: October 19, 2026 · Revised: November 23, 2026 (in-app purchase, summit log)</p>
+<p>Sanireum (the "app") overlays the names of mountain peaks on your camera view. It has no account system, no server, and no internet access. Payment for the paid features (Sanireum Pro) is handled by the Google Play app on your phone.</p>
 <p class="key"><strong>The app does not collect, store, or transmit any personal data.</strong> Location and camera frames are processed only on the device to compute and draw the skyline, and are never sent to the developer or any third party. The app contains no ads, analytics, or crash reporting.</p>
 
 <h2>1. Data processed on the device</h2>
@@ -76,27 +82,33 @@
   <li><strong>Camera frames</strong>: used to draw the overlay and to correct compass error by matching the ridge shape. Not stored, except as downscaled frames inside a recording you explicitly start.</li>
   <li><strong>Orientation sensors</strong>: used to know where the camera points. Included in recordings only.</li>
   <li><strong>Photos you choose</strong> ("Overlay on photo"): the selected photo and its EXIF location/direction are read to draw the overlay. Not stored or transmitted.</li>
+  <li><strong>Summit log</strong> (Pro "summit check-in"): when you tap "Check in" on a summit, the peak's name, height, coordinates and the time are recorded on the device to show your climbed peaks and progress on the 100 famous mountains. Never sent to the developer. You can delete entries in the app.</li>
+  <li><strong>Summit cards and labeled photos</strong> (Pro): saved to your gallery (Pictures/산이름) only when you tap save. No location EXIF is written.</li>
+  <li><strong>In-app purchase history</strong>: whether you bought Sanireum Pro is read from Google Play and remembered on the device. Payment (card, bank, etc.) is handled by Google Play; neither the app nor the developer receives payment details.</li>
 </ul>
 
 <h2>2. Permissions</h2>
-<p>Camera and precise location (foreground only). The app does not request the Internet permission and cannot connect to a network.</p>
+<p>Camera and precise location (foreground only). The app does not request the Internet permission and cannot connect to a network by itself. In-app purchases go through the Google Play app installed on your phone.</p>
 
 <h2>3. Recordings</h2>
 <p>Recordings you create stay in the app's private storage. They leave the device only if you export them yourself with "Share" or "Save". They can be deleted in the app and are removed when the app is uninstalled.</p>
 
-<h2>4. Third parties</h2>
-<p>None. No third-party SDKs are used.</p>
+<h2>4. Backup of the summit log</h2>
+<p>The summit log file is included in Android Auto Backup. If Google backup is turned on in your phone settings, only this file is backed up, encrypted, to your Google account and restored when you install the app on a new phone with the same account. Backup is handled by Android and Google; the developer cannot see it. Recordings, settings and purchase state are not backed up (purchases are re-checked with Google Play).</p>
 
-<h2>5. Children</h2>
+<h2>5. Third parties</h2>
+<p>None. No ads, analytics or crash-reporting SDKs are used. In-app purchases are processed by Google Play under Google's privacy policy.</p>
+
+<h2>6. Children</h2>
 <p>The app collects no personal data from anyone, including children.</p>
 
-<h2>6. Data sources</h2>
+<h2>7. Data sources</h2>
 <p>Terrain: Copernicus DEM GLO-30 (© DLR e.V. 2010-2014 and © Airbus Defence and Space GmbH 2014-2018, provided under COPERNICUS by the European Union and ESA). Peaks: © OpenStreetMap contributors (ODbL).</p>
 
-<h2>7. Changes</h2>
+<h2>8. Changes</h2>
 <p>Updates will be posted on this page with a new effective date.</p>
 
-<h2>8. Contact</h2>
+<h2>9. Contact</h2>
 <p>Email: <a href="mailto:quaiton89@gmail.com">quaiton89@gmail.com</a></p>
 
 </body>
