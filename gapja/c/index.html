@@ -40,14 +40,22 @@
   var store = document.getElementById('store');
   if (!/^[A-Za-z0-9_-]{10,600}$/.test(d)) {
     title.textContent = '링크가 올바르지 않아요';
-    document.getElementById('desc').innerHTML = '<span class="err">초대 링크 전체를 다시 복사해 열어 주세요.</span>';
+    document.getElementById('desc').innerHTML = '<span class="err">받은 링크 전체를 다시 복사해 열어 주세요.</span>';
     open.style.display = 'none';
     return;
   }
   try {
     var json = decodeURIComponent(escape(atob(d.replace(/-/g, '+').replace(/_/g, '/') + '==='.slice((d.length + 3) % 4))));
     var m = JSON.parse(json);
-    if (m && m.n) title.textContent = String(m.n).slice(0, 20) + ' 님이 궁합을 보자고 했어요';
+    var who = m && m.n ? String(m.n).slice(0, 20) + ' 님' : '';
+    if (m && m.k === 's') {
+      // 명식 보내기 링크: 같은 앱 경로(compat)로 열고, 앱이 k 를 보고 명식으로 받는다
+      document.title = '갑자 · 사주 명식';
+      document.querySelector('.seal').textContent = '命';
+      title.textContent = (who ? who + '의 ' : '') + '사주 명식이 왔어요';
+      document.getElementById('desc').textContent = '갑자 앱에서 열면 네 기둥과 오행, 대운이 바로 나와요.';
+      open.textContent = '갑자 앱에서 명식 보기';
+    } else if (who) title.textContent = who + '이 궁합을 보자고 했어요';
   } catch (e) {}
   var play = 'https://play.google.com/store/apps/details?id=com.gapja.saju&referrer=' + encodeURIComponent('d=' + d);
   store.href = play;
